@@ -1,0 +1,58 @@
+<div class="relative overflow-hidden mb-8">
+    <div class="rounded-t-xl  overflow-hidden bg-gradient-to-r from-emerald-50 to-teal-100 p-10">
+        <div class="grid grid-cols-5 divide-x divide-green-500">
+            <div></div>
+            <div class="text-center font-extrabold text-blue-600 text-xl lg:text-xl sm:text-xs text-emerald-600 px-6">ActiveCases</div>
+            <div class="text-center font-extrabold text-green-600 text-xl text-emerald-600 px-6">Recovered</div>
+            <div class="text-center font-extrabold text-red-600 text-xl text-emerald-600 px-6">Deaths</div>
+            <div></div>
+        </div>
+        <div class="relative overflow-hidden mb-8">
+            <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-emerald-50 to-teal-100 p-10">
+                <div class="grid grid-cols-5 divide-x divide-green-500 ">
+                    <div></div>
+                    <div class="text-center text-blue-600 font-extrabold text-emerald-600 px-6">
+                        <span class="text-xl">{{activeCases | number}}</span>
+                        <span class="text-md">&nbsp;&nbsp;&nbsp;&nbsp;({{activeCasesNew | number}})</span>
+                    </div>
+                    <div class="text-center text-green-600 font-extrabold text-emerald-600 px-6">
+                        <span class="text-xl">{{recovered | number}}</span>
+                        <span class="text-md">&nbsp;&nbsp;&nbsp;&nbsp;({{recoveredNew | number}})</span>
+                    </div>
+                    <div class="text-center text-red-600 font-extrabold text-emerald-600 px-6">
+                        <span class="text-xl">{{deaths | number}}</span>
+                        <span class="text-md">&nbsp;&nbsp;&nbsp;&nbsp;({{deathsNew | number}})</span>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="relative overflow-hidden mb-8">
+                <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-emerald-50 to-teal-100 p-10">
+                    <div class="grid grid-cols-1 text-yellow-600 divide-x divide-green-500">
+                        <div class="text-center font-extrabold text-2xl text-emerald-600 px-6">TotalCases</div>
+                    </div>
+                    <div class="relative overflow-hidden mb-8">
+                        <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-emerald-50 to-teal-100 p-10">
+                            <div class="grid grid-cols-1 text-yellow-600 divide-x divide-green-500">
+                                <div class="text-center font-extrabold text-2xl text-emerald-600 px-6">{{totalCases | number}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <header class="header-section">
+                        <marquee class="pointerCursor text-xl" onmouseover="this.stop();" onmouseout="this.start();"
+                            direction="left"  behavior="loop">Total Number of test during previuos day
+                            {{previousDayTests | number}}
+                        </marquee>
+                        <div class="text-center text-xl font-semibold animate-pulse text-purple-700 text-opacity-100">
+                            <a href="https://tncovidbeds.tnega.org/" class=" no-underline hover:underline centre">Click
+                                here
+                                to check the Bed availabilities in TamilNadu</a>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
